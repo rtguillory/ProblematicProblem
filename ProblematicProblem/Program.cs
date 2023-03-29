@@ -33,7 +33,7 @@ namespace ProblematicProblem
                 Console.Write("What is your age? ");
                 int userAge = int.Parse(Console.ReadLine());
                 Console.WriteLine();
-                if (userAge < 21) { activities.Remove("Wine Tasting"); }
+                if (userAge < 21 && activities.Contains("Wine Tasting")) { activities.Remove("Wine Tasting"); }
 
                 Console.Write("Would you like to see the current list of activities? Sure/No thanks: ");
                 bool seeList = (Console.ReadLine().ToLower() == "sure") ? true : false;
